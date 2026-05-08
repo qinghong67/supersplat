@@ -22,9 +22,12 @@ const cacheUrls = [
     './static/lib/webp/webp.wasm',
     './static/locales/de.json',
     './static/locales/en.json',
+    './static/locales/es.json',
     './static/locales/fr.json',
     './static/locales/ja.json',
     './static/locales/ko.json',
+    './static/locales/pt-BR.json',
+    './static/locales/ru.json',
     './static/locales/zh-CN.json'
 ];
 

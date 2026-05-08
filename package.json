@@ -15,8 +15,11 @@
     "main": "index.js",
     "scripts": {
         "build": "rollup -c",
+        "build:debug": "cross-env BUILD_TYPE=debug npm run build",
+        "build:cloudflare": "npm run build:debug",
         "watch": "rollup -c -w",
         "serve": "serve dist -C",
+        "deploy:cloudflare": "npm run build:cloudflare && npx wrangler pages deploy dist --project-name supersplat",
         "develop": "cross-env BUILD_TYPE=debug concurrently --kill-others \"npm run watch\" \"npm run serve\"",
         "develop:auto-launch": "concurrently --kill-others \"xdg-open 'http://localhost:3000/'\" \"npm run watch\" \"npm run serve\"",
         "lint": "eslint src"

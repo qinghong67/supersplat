@@ -50,6 +50,30 @@ To initialize a local development environment for SuperSplat, ensure you have [N
 
 When changes to the source are detected, SuperSplat is rebuilt automatically. Simply refresh your browser to see your changes.
 
+## Cloudflare Pages
+
+This fork includes a Cloudflare Pages configuration in `wrangler.toml`.
+
+For a GitHub-connected Cloudflare Pages project, use:
+
+```sh
+npm run build:cloudflare
+```
+
+Set the build output directory to:
+
+```sh
+dist
+```
+
+To deploy from a local authenticated Wrangler session, run:
+
+```sh
+npm run deploy:cloudflare
+```
+
+This repository also includes `.github/workflows/cloudflare-pages.yml` for GitHub Actions deployment. Add `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` as repository secrets to enable it.
+
 ## Localizing the SuperSplat Editor
 
 The currently supported languages are available here:
